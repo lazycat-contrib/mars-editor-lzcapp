@@ -1,0 +1,55 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: .lazycat-build/mars-editor.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: git
+
+build:
+  toolchains:
+    - kind: node
+      version: 22
+  run_buildscript: true
+
+images: []
+
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+    create_if_missing: true
+    changelog_locales: [zh, en]
+    retry:
+      enabled: true
+      max_attempts: 3
+      initial_delay: 2s
+      max_delay: 30s
+    application:
+      language: zh
+      name: 火星编辑器
+      brief: Markdown 写作，一键转成内联样式富文本，粘贴到公众号编辑器即可无损还原
+      description: |
+        火星编辑器是一个为公众号写作者准备的 Markdown 编辑器：左边写 Markdown，
+        中间是源码，右边实时预览，一键复制成带内联样式的富文本，粘进公众号后台
+        不用再修排版。内置多套排版主题、图片管理与长图导出，全部在浏览器本地运行，
+        文稿不会上传到任何服务器。
+      keywords: Markdown,公众号,富文本,排版,编辑器,长图
+      source: https://github.com/whyubel1eve/Mars-Editor-Web
+      source_author: whyubel1eve
+      support_pc: true
+      screenshot_pc_files:
+        - .github/screenshots/pc-1-editor.png
+        - .github/screenshots/pc-2-preview.png
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: 火星编辑器
+    summary: Markdown 写作，一键转成公众号可粘贴的内联样式富文本

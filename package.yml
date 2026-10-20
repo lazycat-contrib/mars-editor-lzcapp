@@ -1,0 +1,22 @@
+package: community.lazycat.app.mars-editor
+version: 1.0.0
+name: Mars Editor
+description: Write Markdown and convert it to inline-styled rich text that pastes cleanly into the WeChat article editor
+min_os_version: 1.5.0
+homepage: https://github.com/whyubel1eve/Mars-Editor-Web
+author: whyubel1eve
+license: MIT
+locales:
+  zh:
+    name: 火星编辑器
+    description: Markdown 写作，一键转成内联样式富文本，粘贴到微信公众号编辑器即可无损还原
+  zh_CN:
+    name: 火星编辑器
+    description: Markdown 写作，一键转成内联样式富文本，粘贴到微信公众号编辑器即可无损还原
+  en:
+    name: Mars Editor
+    description: Write Markdown and convert it to inline-styled rich text for the WeChat article editor
+unsupported_platforms:
+  - ios
+  - android
+  - tvos

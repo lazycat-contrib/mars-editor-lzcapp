@@ -1,0 +1,4 @@
+*.lpk
+.lazycat-build/
+dist/
+node_modules/
