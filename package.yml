@@ -1,5 +1,5 @@
 package: community.lazycat.app.mars-editor
-version: 1.0.1
+version: 1.0.2
 name: Mars Editor
 description: Write Markdown and convert it to inline-styled rich text that pastes cleanly into the WeChat article editor
 min_os_version: 1.5.0
