@@ -23,7 +23,7 @@ images: []
 
 stores:
   official:
-    enabled: true
+    enabled: false
     skip_if_version_exists: true
     create_if_missing: true
     changelog_locales: [zh, en]
